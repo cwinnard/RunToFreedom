@@ -24,8 +24,8 @@ public class StepService {
 			accountValue = accountValue.multiply(new BigDecimal(1.09));
 		}
 		
-		response.setAccountValue(accountValue.doubleValue());
-		response.setMonthlySavings(monthlySavings.doubleValue());
+		response.setAccountValue(Math.round(accountValue.doubleValue()));
+		response.setMonthlySavings(Math.round(monthlySavings.doubleValue()));
 		
 		return response;
 	}
