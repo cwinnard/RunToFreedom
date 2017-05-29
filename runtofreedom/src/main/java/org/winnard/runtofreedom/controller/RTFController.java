@@ -15,15 +15,17 @@ import org.winnard.runtofreedom.service.StepService;
 @Controller
 public class RTFController {
 	final static Logger logger = LoggerFactory.getLogger(RTFController.class);
+	
 	@Autowired
 	AccountService accountService;
-	StepService stepService = new StepService();
+	@Autowired
+	StepService stepService;
 
 	@RequestMapping("/addUser")
-	public @ResponseBody String addUser(@RequestBody AccountDTO dto) {
+	public @ResponseBody AccountDTO addUser(@RequestBody AccountDTO dto) {
 		logger.warn("calling accountService");
 		accountService.register(dto);
-		return "true";
+		return null;
 	}
 	
     @RequestMapping("/step")

@@ -2,15 +2,19 @@ package org.winnard.runtofreedom.service;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.winnard.runtofreedom.model.StepDTO;
 import org.winnard.runtofreedom.utils.StepUtils;
 
+@Component
 public class StepService {
 	
 	public StepService(){}
+	@Autowired
+	StepUtils utils;
 	
 	double interestRate = 0.09;
-	StepUtils utils = new StepUtils();
 	
 	public StepDTO executeStep(StepDTO request) {
 		StepDTO response = new StepDTO();
@@ -27,6 +31,7 @@ public class StepService {
 		response.setAccountValue(Math.round(accountValue.doubleValue()));
 		response.setMonthlySavings(Math.round(monthlySavings.doubleValue()));
 		
+		utils.saveStep(request, response);
 		return response;
 	}
 }
