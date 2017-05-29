@@ -12,7 +12,7 @@ public class StepService {
 	
 	public StepService(){}
 	@Autowired
-	StepUtils utils;
+	StepUtils stepUtils;
 	
 	double interestRate = 0.09;
 	
@@ -31,7 +31,7 @@ public class StepService {
 		response.setAccountValue(Math.round(accountValue.doubleValue()));
 		response.setMonthlySavings(Math.round(monthlySavings.doubleValue()));
 		
-		utils.saveStep(request, response);
+		stepUtils.saveStep(request, response);
 		return response;
 	}
 }

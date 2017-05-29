@@ -1,14 +1,14 @@
 package org.winnard.runtofreedom.model;
 
-public class StepDBTO {
+public class StepdbDTO {
 	double startAccountValue;
 	double startMonthlySavings;
 	double endAccountValue;
 	double endMonthlySavings;
 	
-	public StepDBTO(){}
+	public StepdbDTO(){}
 	
-	public StepDBTO(double startAccountValue, double startMonthlySavings, double endAccountValue,
+	public StepdbDTO(double startAccountValue, double startMonthlySavings, double endAccountValue,
 			double endMonthlySavings) {
 		super();
 		this.startAccountValue = startAccountValue;
