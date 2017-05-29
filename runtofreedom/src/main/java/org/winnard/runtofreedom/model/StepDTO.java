@@ -4,6 +4,8 @@ public class StepDTO {
 	double accountValue;
 	double monthlySavings;
 	
+	public StepDTO(){}
+	
 	public StepDTO(double accountValue, double monthlySavings) {
 		super();
 		this.accountValue = accountValue;

@@ -9,6 +9,8 @@ public class AccountDTO {
 	double accountValue;
 	double monthlySavings;
 	
+	public AccountDTO(){}
+	
 	public AccountDTO(int userId, String userName, String password, String firstName, String lastName,
 			double accountValue, double monthlySavings) {
 		super();

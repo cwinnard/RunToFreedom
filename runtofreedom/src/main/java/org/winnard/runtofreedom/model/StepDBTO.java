@@ -6,6 +6,8 @@ public class StepDBTO {
 	double endAccountValue;
 	double endMonthlySavings;
 	
+	public StepDBTO(){}
+	
 	public StepDBTO(double startAccountValue, double startMonthlySavings, double endAccountValue,
 			double endMonthlySavings) {
 		super();
