@@ -15,6 +15,11 @@ public class AccountService {
 	@Autowired
 	UserRepository repository;
 	
+	public AccountDTO getUser(String username) {
+		logger.warn("retrieving user details by username");
+		return repository.getUser(username);
+	}
+	
 	public void register(AccountDTO dto) {
 		logger.warn("adding user to DB");
 		repository.addUser(dto);

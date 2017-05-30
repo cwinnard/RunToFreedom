@@ -5,20 +5,18 @@ public class AccountDTO {
 	String userName;
 	String password;
 	String firstName;
-	String lastName;
 	double accountValue;
 	double monthlySavings;
 	
 	public AccountDTO(){}
 	
-	public AccountDTO(int userId, String userName, String password, String firstName, String lastName,
+	public AccountDTO(int userId, String userName, String password, String firstName,
 			double accountValue, double monthlySavings) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
 		this.password = password;
 		this.firstName = firstName;
-		this.lastName = lastName;
 		this.accountValue = accountValue;
 		this.monthlySavings = monthlySavings;
 	}
@@ -53,14 +51,6 @@ public class AccountDTO {
 	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
-	}
-	
-	public String getLastName() {
-		return lastName;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 	
 	public double getAccountValue() {
