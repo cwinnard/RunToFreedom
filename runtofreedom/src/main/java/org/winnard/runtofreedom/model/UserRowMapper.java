@@ -15,6 +15,7 @@ final static Logger logger = LoggerFactory.getLogger(UserRowMapper.class);
 		AccountDTO dto = new AccountDTO();
 		dto.setUserId(rs.getInt("USERID"));
 		dto.setUserName(rs.getString("USERNAME"));
+		dto.setPassword(rs.getString("PASSWORD"));
 		dto.setFirstName(rs.getString("FIRSTNAME"));
 		dto.setAccountValue(rs.getDouble("ACCOUNTVALUE"));
 		dto.setMonthlySavings(rs.getDouble("MONTHLYSAVINGS"));

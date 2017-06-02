@@ -15,7 +15,15 @@ public class AccountService {
 	@Autowired
 	UserRepository repository;
 	
-	public AccountDTO getUser(String username) {
+	public AccountDTO login(String username, String password) {
+		AccountDTO dto = getUser(username);
+		if (password.equals(dto.getPassword())) {
+			return dto;
+		}
+		return new AccountDTO();
+	}
+	
+	private AccountDTO getUser(String username) {
 		logger.warn("retrieving user details by username");
 		return repository.getUser(username);
 	}
