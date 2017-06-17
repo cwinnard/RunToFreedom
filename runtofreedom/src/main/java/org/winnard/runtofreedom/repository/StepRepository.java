@@ -21,7 +21,7 @@ public class StepRepository {
 		if (jdbcTemplate == null) {
 			logger.warn("jdbc template is null!");
 		}
-		jdbcTemplate.update("Insert into step(StartAccountValue,StartMonthlySavings,EndAccountValue,EndMonthlySavings) values (?,?,?,?)",
-				dbto.getStartAccountValue(), dbto.getStartMonthlySavings(),dbto.getEndAccountValue(),dbto.getEndMonthlySavings());
+		jdbcTemplate.update("Insert into step(RunID, StartAccountValue,StartMonthlySavings,EndAccountValue,EndMonthlySavings) values (?,?,?,?,?)",
+				dbto.getRunId(), dbto.getStartAccountValue(), dbto.getStartMonthlySavings(),dbto.getEndAccountValue(),dbto.getEndMonthlySavings());
 	}
 }

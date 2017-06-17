@@ -1,6 +1,7 @@
 package org.winnard.runtofreedom.model;
 
 public class StepdbDTO {
+	int runId;
 	double startAccountValue;
 	double startMonthlySavings;
 	double endAccountValue;
@@ -8,15 +9,24 @@ public class StepdbDTO {
 	
 	public StepdbDTO(){}
 	
-	public StepdbDTO(double startAccountValue, double startMonthlySavings, double endAccountValue,
+	public StepdbDTO(int runId, double startAccountValue, double startMonthlySavings, double endAccountValue,
 			double endMonthlySavings) {
 		super();
+		this.runId = runId;
 		this.startAccountValue = startAccountValue;
 		this.startMonthlySavings = startMonthlySavings;
 		this.endAccountValue = endAccountValue;
 		this.endMonthlySavings = endMonthlySavings;
 	}
 	
+	public int getRunId() {
+		return runId;
+	}
+
+	public void setRunId(int runId) {
+		this.runId = runId;
+	}
+
 	public double getStartAccountValue() {
 		return startAccountValue;
 	}

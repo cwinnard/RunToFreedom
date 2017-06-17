@@ -9,8 +9,8 @@ import org.winnard.runtofreedom.utils.StepUtils;
 
 @Component
 public class StepService {
-	
 	public StepService(){}
+	
 	@Autowired
 	StepUtils stepUtils;
 	

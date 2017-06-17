@@ -1,17 +1,27 @@
 package org.winnard.runtofreedom.model;
 
 public class StepDTO {
+	int runId;
 	double accountValue;
 	double monthlySavings;
 	
 	public StepDTO(){}
 	
-	public StepDTO(double accountValue, double monthlySavings) {
+	public StepDTO(int runId, double accountValue, double monthlySavings) {
 		super();
+		this.runId = runId;
 		this.accountValue = accountValue;
 		this.monthlySavings = monthlySavings;
 	}
 	
+	public int getRunId() {
+		return runId;
+	}
+
+	public void setRunId(int runId) {
+		this.runId = runId;
+	}
+
 	public double getAccountValue() {
 		return accountValue;
 	}

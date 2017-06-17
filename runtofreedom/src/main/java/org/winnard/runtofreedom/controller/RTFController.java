@@ -38,7 +38,13 @@ public class RTFController {
 	public @ResponseBody AccountDTO addUser(@RequestBody AccountDTO dto) {
 		logger.warn("calling accountService...");
 		accountService.register(dto);
-		return null;
+		return dto;
+	}
+	
+	@RequestMapping("/newRun")
+	public @ResponseBody String startNewRun(@RequestParam String username) {
+		logger.warn("calling runService...");
+		return runService.startNewRun(username);
 	}
 	
 	@RequestMapping("/savedRuns")

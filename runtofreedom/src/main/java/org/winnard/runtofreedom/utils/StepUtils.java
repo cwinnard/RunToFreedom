@@ -13,8 +13,7 @@ public class StepUtils {
 	StepRepository repository;
 	
 	public void saveStep(StepDTO request, StepDTO response) {
-		StepdbDTO dbto = new StepdbDTO(request.getAccountValue(), request.getMonthlySavings(), response.getAccountValue(), response.getMonthlySavings());
+		StepdbDTO dbto = new StepdbDTO(request.getRunId(), request.getAccountValue(), request.getMonthlySavings(), response.getAccountValue(), response.getMonthlySavings());
 		repository.addStep(dbto);
 	}
-
 }
